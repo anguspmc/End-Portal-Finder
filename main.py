@@ -14,5 +14,6 @@ z1 = int(pos1[1])
 x2 = 0 - int(pos2[0])
 z2 = int(pos2[1])
 
-x, y = Symbol('x y')
-print(str(solve(angle1 * (x - x1) + z1 - y == angle2 * (x - x2) + z2 - y)))
+x = Symbol('x')
+z = Symbol('z')
+print(solve([angle1 * (-x - x1) + z1 - z, angle2 * (-x - x2) + z2 - z]))
